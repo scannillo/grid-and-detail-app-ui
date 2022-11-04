@@ -14,6 +14,7 @@
 		80D42BA329158CB5005EDD34 /* Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D42BA229158CB5005EDD34 /* Framework.swift */; };
 		80D42BA52915AE21005EDD34 /* FrameworkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D42BA42915AE21005EDD34 /* FrameworkDetailView.swift */; };
 		80D42BA72915B3E1005EDD34 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D42BA62915B3E1005EDD34 /* CustomButton.swift */; };
+		80D42BA92915BEB2005EDD34 /* FrameworkGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D42BA82915BEB2005EDD34 /* FrameworkGridViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		80D42BA229158CB5005EDD34 /* Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Framework.swift; sourceTree = "<group>"; };
 		80D42BA42915AE21005EDD34 /* FrameworkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailView.swift; sourceTree = "<group>"; };
 		80D42BA62915B3E1005EDD34 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		80D42BA82915BEB2005EDD34 /* FrameworkGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkGridViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +60,10 @@
 			isa = PBXGroup;
 			children = (
 				80D42B9429158C6F005EDD34 /* Apple_FrameworksApp.swift */,
-				80D42B9629158C6F005EDD34 /* FrameworkGridView.swift */,
 				80D42BA229158CB5005EDD34 /* Framework.swift */,
 				80D42BA42915AE21005EDD34 /* FrameworkDetailView.swift */,
+				80D42B9629158C6F005EDD34 /* FrameworkGridView.swift */,
+				80D42BA82915BEB2005EDD34 /* FrameworkGridViewModel.swift */,
 				80D42BA62915B3E1005EDD34 /* CustomButton.swift */,
 				80D42B9829158C70005EDD34 /* Assets.xcassets */,
 				80D42B9A29158C70005EDD34 /* Preview Content */,
@@ -151,6 +154,7 @@
 				80D42BA329158CB5005EDD34 /* Framework.swift in Sources */,
 				80D42BA72915B3E1005EDD34 /* CustomButton.swift in Sources */,
 				80D42B9529158C6F005EDD34 /* Apple_FrameworksApp.swift in Sources */,
+				80D42BA92915BEB2005EDD34 /* FrameworkGridViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
