@@ -7,11 +7,14 @@
 
 import Foundation
 
-struct Framework {
+struct Framework: Identifiable {
     let name: String
     let imageName: String
     let urlString: String
     let description: String
+    
+    // MARK: - Identifiable
+    let id = UUID()
 }
 
 struct MockData {

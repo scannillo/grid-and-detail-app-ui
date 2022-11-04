@@ -13,12 +13,16 @@ struct FrameworkGridView: View {
     let columns: [GridItem] = Array(repeating: GridItem(.flexible()), count: 3)
     
     var body: some View {
-        LazyVGrid(columns: columns) {
-            FrameworkCellView(framework: MockData.frameworks.first!)
-            FrameworkCellView(framework: MockData.frameworks.first!)
-            FrameworkCellView(framework: MockData.frameworks.first!)
+        NavigationView {
+            ScrollView {
+                LazyVGrid(columns: columns) {
+                    ForEach(MockData.frameworks) { framework in
+                        FrameworkCellView(framework: framework)
+                    }
+                }
+            }
+            .navigationTitle("🍏 Frameworks")
         }
-        .padding()
     }
 }
 
@@ -43,6 +47,7 @@ struct FrameworkCellView: View {
                 .scaledToFit()
                 .minimumScaleFactor(0.5)
         }
+        .padding()
     }
     
 }
