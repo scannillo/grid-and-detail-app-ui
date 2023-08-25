@@ -12,13 +12,10 @@ struct FrameworkGridView: View {
     // Use StateObject when initializing, use ObservedObject when injecting
     @StateObject var viewModel = FrameworkGridViewModel()
     
-    // # of GridItems = # of columns
-    let columns: [GridItem] = Array(repeating: GridItem(.flexible()), count: 3)
-    
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: columns) {
+                LazyVGrid(columns: viewModel.columns) {
                     ForEach(MockData.frameworks) { framework in
                         FrameworkCellView(framework: framework)
                             .onTapGesture {
@@ -40,26 +37,6 @@ struct FrameworkGridView_Previews: PreviewProvider {
     static var previews: some View {
         FrameworkGridView()
     }
-}
-
-struct FrameworkCellView: View {
- 
-    let framework: Framework
-    
-    var body: some View {
-        VStack {
-            Image(framework.imageName)
-                .resizable()
-                .frame(width: 90, height: 90)
-            Text(framework.name)
-                .font(.title2)
-                .fontWeight(.semibold)
-                .scaledToFit()
-                .minimumScaleFactor(0.5)
-        }
-        .padding()
-    }
-    
 }
 
 // Imperative - telling UI when and how to update
