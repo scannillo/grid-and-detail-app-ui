@@ -10,15 +10,10 @@ import SwiftUI
 struct FrameworkDetailView: View {
     
     let framework: Framework
-    @Binding var isShowingDetailView: Bool
     @State private var isShowingSafariView = false
     
     var body: some View {
-        VStack() {
-            XDismissButton(isShowingDetailView: $isShowingDetailView)
-            
-            Spacer()
-            
+        VStack() {            
             FrameworkCellView(framework: framework)
             
             Text(framework.description)
@@ -48,6 +43,6 @@ struct FrameworkDetailView: View {
 
 struct FrameworkDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        FrameworkDetailView(framework: MockData.frameworks.last!, isShowingDetailView: .constant(true))
+        FrameworkDetailView(framework: MockData.frameworks.last!)
     }
 }
