@@ -32,8 +32,13 @@ struct FrameworkDetailView: View {
             Button() {
                 isShowingSafariView = true
             } label: {
-                CustomButton(title: "Learn More")
+                // CustomButton(title: "Learn More") old custom button
+                Label("Learn More", systemImage: "book.fill")
             }
+            .buttonStyle(.borderedProminent) // iOS 15+
+            .controlSize(.large)
+            .buttonBorderShape(.capsule)
+            .tint(.red)
         }
         .sheet(isPresented: $isShowingSafariView) {
             SafariView(url: URL(string: framework.urlString)!)
