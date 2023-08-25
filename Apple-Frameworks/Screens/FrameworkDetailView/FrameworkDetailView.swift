@@ -23,6 +23,9 @@ struct FrameworkDetailView: View {
             
             Text(framework.description)
                 .padding()
+                .background(Color(.secondarySystemBackground))
+                .cornerRadius(20)
+                .padding()
             
             Spacer()
             
@@ -32,7 +35,7 @@ struct FrameworkDetailView: View {
                 CustomButton(title: "Learn More")
             }
         }
-        .fullScreenCover(isPresented: $isShowingSafariView) {
+        .sheet(isPresented: $isShowingSafariView) {
             SafariView(url: URL(string: framework.urlString)!)
         }
     }
