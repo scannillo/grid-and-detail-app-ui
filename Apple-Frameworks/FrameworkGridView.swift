@@ -61,3 +61,6 @@ struct FrameworkCellView: View {
     }
     
 }
+
+// Imperative - telling UI when and how to update
+// Declarative - update source of truth, and UI reacts to change & updates
